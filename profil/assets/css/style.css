@@ -1,0 +1,168 @@
+/* ==========================
+   SECTION PROYEK - KARTU KECIL
+   ========================== */
+/* ==========================
+   SECTION PROYEK - VERSI KECIL
+   ========================== */
+
+/* Container utama proyek */
+#proyek {
+  background-color: #0a0a23; /* Warna latar belakang gelap */
+  padding: 3rem 1rem;
+}
+
+/* Judul bagian Proyek */
+#proyek .section-title {
+  font-size: 1.5rem; /* Ukuran lebih kecil */
+  font-weight: 700;
+  text-align: left;
+  color: white;
+  position: relative;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+/* Garis bawah animasi untuk judul */
+#proyek .section-title::after {
+  content: '';
+  display: block;
+  width: 30%;
+  height: 2px;
+  background-color: #3b82f6; /* warna biru */
+  margin-top: 4px;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Layout grid untuk proyek */
+#proyek .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  #proyek .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom di layar besar */
+  }
+}
+
+/* Kartu proyek */
+.glass-card {
+  background: #1c1c2c; /* Warna gelap solid */
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect untuk kartu */
+.glass-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Gambar Proyek */
+.glass-card img {
+  width: 100%;
+  height: 120px; /* Ukuran lebih kecil */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Gambar membesar saat hover */
+.glass-card:hover img {
+  transform: scale(1.03);
+}
+
+/* Isi kartu */
+.glass-card .p-6 {
+  padding: 1rem;
+}
+
+/* Judul proyek */
+.glass-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+/* Deskripsi proyek */
+.glass-card p {
+  font-size: 0.75rem;
+  color: #cbd5e1;
+  margin-bottom: 0.75rem;
+}
+
+/* Container untuk tag teknologi */
+.glass-card .flex {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+/* Tag teknologi */
+.glass-card span {
+  font-size: 0.6rem;
+  padding: 0.25rem 0.5rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  line-height: 1.2;
+  display: inline-block;
+}
+
+/* Contoh tambahan: warna badge */
+.bg-cyan-400\/20 {
+  background-color: rgba(34, 211, 238, 0.2);
+  color: #22d3ee;
+}
+.bg-purple-400\/20 {
+  background-color: rgba(192, 132, 252, 0.2);
+  color: #c084fc;
+}
+.bg-blue-400\/20 {
+  background-color: rgba(96, 165, 250, 0.2);
+  color: #60a5fa;
+}
+.bg-yellow-400\/20 {
+  background-color: rgba(253, 224, 71, 0.2);
+  color: #fde047;
+}
+
+
+
+/* Animasi Fade In & Slide Up */
+.fade-in-slide-up {
+    opacity: 0;
+    transform: translateY(50px); /* Geser ke bawah 50px awalnya */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Transisi untuk animasi */
+}
+
+/* Kelas ini akan ditambahkan oleh JavaScript saat elemen terlihat */
+.fade-in-slide-up.visible {
+    opacity: 1;
+    transform: translateY(0); /* Kembali ke posisi normal */
+}
+
+/* Animasi Fade In & Slide Right (untuk elemen di kanan) */
+.fade-in-slide-right {
+    opacity: 0;
+    transform: translateX(50px); /* Geser ke kanan 50px awalnya */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-slide-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animasi Fade In (untuk logo atau footer) */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
